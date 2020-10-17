@@ -1,0 +1,14 @@
+import tweepy
+
+consumer_key = 'KEY'
+consumer_secret = 'SECRET'
+access_token = 'ACCESS TOKEN'
+access_token_secret = 'ATC'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+api = tweepy.API(auth)
+# commit
+
+tweet = 'Hello, fellow Hackbrighters! 🙋🏾‍♀️ We didn\'t come this far to only come this far. We\'ve got this.'
+api.update_status(status=tweet)
